@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(26, 6, 6);
+    color: rgb(26, 6, 6);
+}
+
+nav {
+    background-color: rgb(26, 6, 6);
+    color: rgb(26, 6, 6);
+}
+
+header {
+    background-color: rgb(26, 6, 6);
+
+}
+
+.background {
+    color: rgb(26, 6, 6);
+}
+
+.title {
+    background-color: rgb(110, 158, 108);
+}
+
+form {
+    background-color: rgb(110, 158, 108);
+}
+
+.login {
+    border-color: rgb(26, 6, 6);
+    border-width: 5px;
+}
+
+h2 {
+    background-color: rgb(26, 6, 6);
+    color: rgb(110, 158, 108) !important;
+}
+
+main {
+    background-color: rgb(110, 158, 108);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+html {
+    height: 100%;
+    background-color: rgb(110, 158, 108);
+}
+
+section {
+    background-color: rgb(110, 158, 108);
+    margin: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+}
+
+section.card.login {
+    background-color: rgb(110, 158, 108);
+}

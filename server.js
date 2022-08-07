@@ -6,10 +6,12 @@ require('dotenv').config(); // attach .env process to obj
 
 const app = express(); // new express app
 
-const { view_routes } = require('./controllers'); // require path to view routes
+const { view_routes, register } = require('./controllers'); // require path to view routes
 
 // load view_routes on root route
 app.use('/', view_routes)
+
+// app.use('/reg', register)
 
 app.use(express.static(path.join(__dirname, '/public'))); // allows frontend files to be shared with browser/client
 // set up the hbs engine stuff

@@ -1,3 +1,6 @@
+
+
 module.exports = {
-    view_routes: require('./view-routes')
+    view_routes: require('./view-routes'),
+    // register: require('./register')
 }
