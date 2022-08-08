@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 // const User = require('../models/User');
 const { isLoggedIn } = require('./helper');
 
+//routes for home page and logging in and registering
 router.get('/', (request, response) => {
     // const users_id = request.session.users_id;
 

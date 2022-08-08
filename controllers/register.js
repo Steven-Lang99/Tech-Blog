@@ -1,3 +1,5 @@
+//Worked on getting my register page working but could not.
+
 // const register = require('express').Router();
 // const User = require('../models/User');
 // const { isLoggedIn } = require('./helpers');
