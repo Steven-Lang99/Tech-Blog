@@ -31,7 +31,7 @@ Please click on the license to read more.
 ## Usage
 Please follow to screenshots for the usage of the application:
 
-![alt text](assets/images/screenshot.png)
+![Screen shot](/img/Screenshot%202022-08-07%20202020.png)
 
 ## Credits
 List of collaborators on the application:
