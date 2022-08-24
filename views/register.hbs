@@ -1,16 +1,22 @@
 <section class="card login" style="width: 18rem;">
     <h2>Register</h2>
-    <form>
+    <form action="/auth/registration" method="post">
         <div class="mb-3 login">
-            <label for="exampleInputEmail1" class="form-label">Username</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Email">
+        </div>
+        <div class="mb-3 login">
+            <label for="username" class="form-label">Username</label>
+            <input name="users_name" type="text" class="form-control" id="username" aria-describedby="emailHelp"
                 placeholder="Enter Username">
         </div>
         <div class="mb-3 login">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                placeholder="Enter Password">
         </div>
-        <a class="btn" href="/auth/login" role="button">Register</a>
+        <button type="submit" class="btn btn-primary">Register</button>
         <a class="btn" href="/" role="button">Back to Home!</a>
     </form>
 </section>

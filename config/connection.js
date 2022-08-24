@@ -1,4 +1,5 @@
 const { Sequelize } = require('sequelize');
+require('dotenv').config();
 
 const connection = new Sequelize(
     'tech_blog_steven',

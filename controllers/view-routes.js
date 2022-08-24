@@ -1,37 +1,61 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-// const User = require('../models/User');
-const { isLoggedIn } = require('./helper');
+const User = require('../models/User');
+const Post = require('../models/Post')
+
 
 //routes for home page and logging in and registering
-router.get('/', (request, response) => {
-    // const users_id = request.session.users_id;
+router.get('/', (req, res) => {
+    if (req.session.user_id) {
 
-    // if (users_id) {
-    //     return User.finOne({
-    //         where: {
-    //             id: users_id
-    //         },
+        return User.findByPk(req.session.user_id).then(user => {
+            user = {
+                id: user.id,
+                users_name: user.users_name,
+                email: user.email,
+                createdAt: user.createdAt
+            }
+            res.render('index', { user })
+        });
+    }
+    res.render('index');
+});
 
-    //         attributes: ['id', 'users_name']
-    //     }).then(user => {
-    //         user = {
-    //             users_name: user.users_name,
-    //         };
+router.get('/register', (req, res) => {
+    res.render('register');
+});
+
+router.get('/login', (req, res) => {
+    res.render('login');
+});
+
+router.get('/dashboard', async (req, res) => {
+
+    console.log(req.session);
+    let user = await User.findByPk(req.session.user_id, { include: Post });
+    let posts = await Post.findAll();
+    // user = {
+    //     username: user.users_name,
+    //     posts: user.posts.map(post => {
+    //         return {
+    //             id: post.id,
+    //             title: post.title,
+    //             message: post.message,
+    //         }
     //     })
     // }
-    response.render('index');
+    posts = posts.map(post => {
+        return {
+            id: post.id,
+            title: post.title,
+            message: post.message,
+        }
+    })
+    res.render('dashboard', { posts, title: 'Dashboard', });
+
+
+
 });
-
-router.get('/register', (request, response) => {
-    response.render('register');
-});
-
-router.get('/login', (request, response) => {
-    response.render('login');
-});
-
-
 
 
 
