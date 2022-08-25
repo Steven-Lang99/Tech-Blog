@@ -10,6 +10,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const { view_routes, post_routes, auth_routes } = require('./controllers'); // require path to view routes
+const sequelize = require('sequelize');
 
 // load view_routes on root route
 
@@ -42,5 +43,6 @@ app.use('/post', post_routes)
 // set up server
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
+    connection.sync({ force: true })
 })
 

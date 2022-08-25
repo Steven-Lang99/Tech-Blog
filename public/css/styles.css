@@ -19,6 +19,27 @@ header {
 
 }
 
+
+h5 {
+    background-color: rgb(26, 6, 6);
+    background: rgb(26, 6, 6);
+}
+
+
+.card-title {
+    color: white;
+    background-color: rgb(26, 6, 6);
+}
+
+.container {
+    border-color: rgb(26, 6, 6);
+    background-color: rgb(110, 158, 108);
+}
+
+h1 {
+    position: sticky;
+}
+
 .background {
     color: rgb(26, 6, 6);
 }
@@ -45,6 +66,7 @@ main {
     background-color: rgb(110, 158, 108);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 90%;
 }

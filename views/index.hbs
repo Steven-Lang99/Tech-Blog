@@ -1,0 +1,9 @@
+<h1>All POSTS</h1>
+{{#each posts}}
+<div class="card container" style="width: 18rem; height: 10rem">
+    <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <p class="card-text">{{this.message}}</p>
+    </div>
+</div>
+{{/each}}

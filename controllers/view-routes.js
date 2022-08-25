@@ -51,7 +51,7 @@ router.get('/dashboard', async (req, res) => {
             message: post.message,
         }
     })
-    res.render('dashboard', { posts, title: 'Dashboard', });
+    res.render('dashboard', { posts, title: 'dashboard', });
 
 
 

@@ -1,6 +1,31 @@
-<div class="card">
-    <h3 class="card-header">Create New Post</h3>
-    <form class="card-body new-post-form" id="new-post-form">
-        <a class="btn justify-content-center" href="/post" role="button">Create!</a>
+<h1>POSTS</h1>
+{{#each posts}}
+<section class="card login" style="width: 18rem;">
+    <h2>{{this.title}}</h2>
+    <form action="/post" method="post">
+        <div class="card-body">
+            <p class="card-text">{{this.message}}</p>
+        </div>
     </form>
-</div>
+</section>
+{{/each}}
+
+
+
+<section class="card login" style="width: 18rem;">
+    <h2>Create a Post</h2>
+    <form action="/post" method="post">
+        <div class="mb-3 login">
+            <label for="exampleInputEmail1" class="form-label">Title</label>
+            <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Title of Post">
+        </div>
+        <div class="mb-3 login">
+            <label for="exampleInputPassword1" class="form-label">Message</label>
+            <input name="message" type="text" class="form-control" id="exampleInputPassword1"
+                placeholder="Enter Message">
+        </div>
+        <button type="submit" class="btn btn-primary">Create!</button>
+
+    </form>
+</section>
