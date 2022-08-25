@@ -36,12 +36,15 @@ User.init(
 
             async beforeCreate(user) {
                 const hashed_pass = await bcrypt.hash(user.password, 10);
+                console.log(user.password)
                 user.password = hashed_pass;
             }
         },
     });
 
 User.prototype.validatePassword = async function (password, stored_password) {
+    console.log(password)
+    console.log(stored_password)
     return await bcrypt.compare(password, stored_password);
 },
 

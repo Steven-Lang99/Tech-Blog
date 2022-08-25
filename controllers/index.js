@@ -1,5 +1,3 @@
-
-
 module.exports = {
     view_routes: require('./view-routes'),
     post_routes: require('./post_routes'),
